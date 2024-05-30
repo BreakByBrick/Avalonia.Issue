@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:DataGrid.DynamicPropertyBinding.ViewModels"
+             xmlns:v="clr-namespace:DataGrid.DynamicPropertyBinding.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DataGrid.DynamicPropertyBinding.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+	<Grid ColumnDefinitions="*,*">
+
+		<DataGrid ItemsSource="{Binding Contacts}" 
+				  BorderBrush="Black"
+				  BorderThickness="1"
+				  Margin="3"
+				  Grid.Column="0">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+			</DataGrid.Columns>
+		</DataGrid>
+
+		<!--IsReadOnly="False"-->
+
+		<DataGrid ItemsSource="{Binding ReflectableContacts}"
+				  BorderBrush="Black"
+				  BorderThickness="1"
+				  Margin="3"
+				  Grid.Column="1">
+			<DataGrid.Columns>
+				<!--
+				<DataGridTextColumn Header="DynamicName" Binding="{Binding DynamicName}" />
+				-->
+				<!--
+				<v:CustomDataGridTextColumn Header="Name"/>
+				-->
+				<DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+				<DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+			</DataGrid.Columns>
+		</DataGrid>
+
+	</Grid>
+	
+</UserControl>
