@@ -3,7 +3,7 @@
 using Avalonia;
 using Avalonia.ReactiveUI;
 
-namespace DataGrid.Issue.Desktop;
+namespace DataGridIssue.Desktop;
 
 class Program
 {

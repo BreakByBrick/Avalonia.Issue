@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace DataGrid.Issue.ViewModels;
+namespace DataGridIssue.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {

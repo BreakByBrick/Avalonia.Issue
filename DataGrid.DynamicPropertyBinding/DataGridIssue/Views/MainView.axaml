@@ -2,10 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:DataGrid.Issue.ViewModels"
-             xmlns:v="clr-namespace:DataGrid.Issue.Views"
+             xmlns:vm="clr-namespace:DataGridIssue.ViewModels"
+             xmlns:v="clr-namespace:DataGridIssue.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DataGrid.Issue.Views.MainView"
+             x:Class="DataGridIssue.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
     <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,7 +15,8 @@
 
 	<Grid ColumnDefinitions="*,*">
 
-		<DataGrid ItemsSource="{Binding Contacts}" 
+		<DataGrid Name="ContactsDataGrid"
+				  ItemsSource="{Binding Contacts}"
 				  BorderBrush="Black"
 				  BorderThickness="1"
 				  Margin="3"
@@ -25,7 +26,8 @@
 			</DataGrid.Columns>
 		</DataGrid>
 
-		<DataGrid ItemsSource="{Binding ReflectableContacts}"
+		<DataGrid Name="ReflectableContactsDataGrid"
+				  ItemsSource="{Binding ReflectableContacts}"
 				  BorderBrush="Black"
 				  BorderThickness="1"
 				  Margin="3"

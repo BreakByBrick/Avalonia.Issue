@@ -2,11 +2,27 @@
 using System.Globalization;
 using System.Reflection;
 
-namespace DataGrid.Issue.ViewModels
+namespace DataGridIssue.ViewModels
 {
 	public class ReflectableContact : Contact, IReflectableType
 	{
-		public string Surname { get; set; } = "SurnameValue";
+		string _surname = string.Empty;
+
+		public string Surname
+		{
+			get => _surname;
+			set
+			{
+				_surname = value;
+				if( string.IsNullOrWhiteSpace( value ) )
+					SetError( nameof( Surname ), "Surname Required" );
+				else
+					SetError( nameof( Surname ), null );
+
+				OnPropertyChanged( nameof( Surname ) );
+			}
+
+		}
 
 		public TypeInfo GetTypeInfo()
 		{
