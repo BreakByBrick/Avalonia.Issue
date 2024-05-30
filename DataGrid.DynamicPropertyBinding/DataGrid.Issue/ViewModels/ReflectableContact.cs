@@ -2,18 +2,16 @@
 using System.Globalization;
 using System.Reflection;
 
-namespace DataGrid.DynamicPropertyBinding.ViewModels
+namespace DataGrid.Issue.ViewModels
 {
 	public class ReflectableContact : Contact, IReflectableType
 	{
 		public string Surname { get; set; } = "SurnameValue";
 
-
 		public TypeInfo GetTypeInfo()
 		{
 			return new DynamicTypeInfo();
 		}
-
 
 		private class DynamicTypeInfo : TypeInfo
 		{
@@ -22,26 +20,12 @@ namespace DataGrid.DynamicPropertyBinding.ViewModels
 			{
 				switch( name )
 				{
+					case "Name":
 					case "DynamicName":
 						return new DynamicPropertyInfo();
 				}
 
 				return null;
-
-				/*
-				var propInfo = new Mock<PropertyInfo>();
-				propInfo.SetupGet( x => x.Name ).Returns( name );
-				propInfo.SetupGet( x => x.PropertyType ).Returns( typeof( object ) );
-				propInfo.SetupGet( x => x.CanWrite ).Returns( true );
-				propInfo.Setup( x => x.GetValue( It.IsAny<object>(), It.IsAny<object[]>() ) )
-					.Returns( ( object target, object[] _ ) => ( ( DynamicReflectableType )target )._dic.GetValueOrDefault( name ) );
-				propInfo.Setup( x => x.SetValue( It.IsAny<object>(), It.IsAny<object>(), It.IsAny<object[]>() ) )
-					.Callback( ( object target, object value, object[] _ ) =>
-					{
-						( ( DynamicReflectableType )target )._dic[ name ] = value;
-					} );
-				return propInfo.Object;
-				*/
 			}
 
 			#region Not Supported
@@ -209,7 +193,7 @@ namespace DataGrid.DynamicPropertyBinding.ViewModels
 
 			public override Type PropertyType => typeof( string );
 
-			public override string Name => "DynamicName";
+			public override string Name => "Name";
 
 			public override object GetValue( object obj, BindingFlags invokeAttr, Binder binder, object[] index, CultureInfo culture )
 			{

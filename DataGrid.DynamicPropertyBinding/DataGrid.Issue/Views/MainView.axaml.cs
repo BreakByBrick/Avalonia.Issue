@@ -2,7 +2,7 @@
 using Avalonia.Data;
 using Avalonia.Interactivity;
 
-namespace DataGrid.DynamicPropertyBinding.Views;
+namespace DataGrid.Issue.Views;
 
 public partial class MainView : UserControl
 {

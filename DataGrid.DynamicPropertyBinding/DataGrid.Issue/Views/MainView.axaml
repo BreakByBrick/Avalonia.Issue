@@ -2,10 +2,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:DataGrid.DynamicPropertyBinding.ViewModels"
-             xmlns:v="clr-namespace:DataGrid.DynamicPropertyBinding.Views"
+             xmlns:vm="clr-namespace:DataGrid.Issue.ViewModels"
+             xmlns:v="clr-namespace:DataGrid.Issue.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DataGrid.DynamicPropertyBinding.Views.MainView"
+             x:Class="DataGrid.Issue.Views.MainView"
              x:DataType="vm:MainViewModel">
   <Design.DataContext>
     <!-- This only sets the DataContext for the previewer in an IDE,
@@ -25,22 +25,15 @@
 			</DataGrid.Columns>
 		</DataGrid>
 
-		<!--IsReadOnly="False"-->
-
 		<DataGrid ItemsSource="{Binding ReflectableContacts}"
 				  BorderBrush="Black"
 				  BorderThickness="1"
 				  Margin="3"
 				  Grid.Column="1">
 			<DataGrid.Columns>
-				<!--
-				<DataGridTextColumn Header="DynamicName" Binding="{Binding DynamicName}" />
-				-->
-				<!--
-				<v:CustomDataGridTextColumn Header="Name"/>
-				-->
 				<DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
 				<DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+				<DataGridTextColumn Header="DynamicName" Binding="{Binding DynamicName}" />
 			</DataGrid.Columns>
 		</DataGrid>
 

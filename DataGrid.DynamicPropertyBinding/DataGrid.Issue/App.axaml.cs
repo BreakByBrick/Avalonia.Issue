@@ -2,10 +2,10 @@
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-using DataGrid.DynamicPropertyBinding.ViewModels;
-using DataGrid.DynamicPropertyBinding.Views;
+using DataGrid.Issue.ViewModels;
+using DataGrid.Issue.Views;
 
-namespace DataGrid.DynamicPropertyBinding;
+namespace DataGrid.Issue;
 
 public partial class App : Application
 {

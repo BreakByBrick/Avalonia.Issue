@@ -1,6 +1,6 @@
 ﻿using Avalonia.Controls;
 
-namespace DataGrid.DynamicPropertyBinding.Views;
+namespace DataGrid.Issue.Views;
 
 public partial class MainWindow : Window
 {

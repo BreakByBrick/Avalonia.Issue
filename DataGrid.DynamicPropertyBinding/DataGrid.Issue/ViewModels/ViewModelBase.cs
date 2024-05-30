@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace DataGrid.DynamicPropertyBinding.ViewModels;
+namespace DataGrid.Issue.ViewModels;
 
 public class ViewModelBase : ReactiveObject
 {

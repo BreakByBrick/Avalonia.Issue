@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGrid.DynamicPropertyBinding", "DataGrid.DynamicPropertyBinding\DataGrid.DynamicPropertyBinding.csproj", "{3FEC362A-885A-4CEE-A770-14736EE86058}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGrid.Issue", "DataGrid.Issue\DataGrid.Issue.csproj", "{3FEC362A-885A-4CEE-A770-14736EE86058}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGrid.DynamicPropertyBinding.Desktop", "DataGrid.DynamicPropertyBinding.Desktop\DataGrid.DynamicPropertyBinding.Desktop.csproj", "{7A1D21A6-0BFD-4B01-BECD-8F6386D59478}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGrid.Issue.Desktop", "DataGrid.Issue.Desktop\DataGrid.Issue.Desktop.csproj", "{7A1D21A6-0BFD-4B01-BECD-8F6386D59478}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

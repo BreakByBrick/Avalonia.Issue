@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace DataGrid.DynamicPropertyBinding.ViewModels
+namespace DataGrid.Issue.ViewModels
 {
 	internal static class Contacts
 	{
 		static IEnumerable<Contact> GetBasicContacts()
 		{
-			yield return new Contact() { Name = "NameValue" };
-			yield return new Contact() { Name = "NameValue" };
-			yield return new Contact() { Name = "NameValue" };
-			yield return new Contact() { Name = "NameValue" };
-			yield return new Contact() { Name = "NameValue" };
+			yield return new Contact();
+			yield return new Contact();
+			yield return new Contact();
+			yield return new Contact();
+			yield return new Contact();
 		}
 
 		static IReadOnlyList<Contact>? _basicContacts;
@@ -31,11 +31,11 @@ namespace DataGrid.DynamicPropertyBinding.ViewModels
 
 		static IEnumerable<ReflectableContact> GetReflectableContacts()
 		{
-			yield return new ReflectableContact() { Name = "NameValue" };
-			yield return new ReflectableContact() { Name = "NameValue" };
-			yield return new ReflectableContact() { Name = "NameValue" };
-			yield return new ReflectableContact() { Name = "NameValue" };
-			yield return new ReflectableContact() { Name = "NameValue" };
+			yield return new ReflectableContact();
+			yield return new ReflectableContact();
+			yield return new ReflectableContact();
+			yield return new ReflectableContact();
+			yield return new ReflectableContact();
 		}
 
 		static IReadOnlyList<ReflectableContact>? _reflectableContacts;

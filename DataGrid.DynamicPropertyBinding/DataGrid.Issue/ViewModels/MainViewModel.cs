@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace DataGrid.DynamicPropertyBinding.ViewModels;
+namespace DataGrid.Issue.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
