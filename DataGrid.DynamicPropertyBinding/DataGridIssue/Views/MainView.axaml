@@ -13,8 +13,9 @@
     <vm:MainViewModel />
   </Design.DataContext>
 
-	<Grid ColumnDefinitions="*,*">
+	<Grid ColumnDefinitions="*">
 
+		<!--
 		<DataGrid Name="ContactsDataGrid"
 				  ItemsSource="{Binding Contacts}"
 				  BorderBrush="Black"
@@ -25,7 +26,8 @@
 				<DataGridTextColumn Header="Name" Binding="{Binding Name}" />
 			</DataGrid.Columns>
 		</DataGrid>
-
+		-->
+		
 		<DataGrid Name="ReflectableContactsDataGrid"
 				  ItemsSource="{Binding ReflectableContacts}"
 				  BorderBrush="Black"
@@ -35,7 +37,7 @@
 			<DataGrid.Columns>
 				<DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
 				<DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
-				<DataGridTextColumn Header="DynamicName" Binding="{Binding DynamicName}" />
+				<DataGridTextColumn Header="DynamicProperty" Binding="{Binding DynamicProperty}" />
 			</DataGrid.Columns>
 		</DataGrid>
 

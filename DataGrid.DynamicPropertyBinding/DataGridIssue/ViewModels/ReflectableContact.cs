@@ -36,8 +36,8 @@ namespace DataGridIssue.ViewModels
 			{
 				switch( name )
 				{
-					case "Name":
-					case "DynamicName":
+					//case "Name":
+					case "DynamicProperty":
 						return new DynamicPropertyInfo();
 				}
 
@@ -209,11 +209,11 @@ namespace DataGridIssue.ViewModels
 
 			public override Type PropertyType => typeof( string );
 
-			public override string Name => "Name";
+			public override string Name => "DynamicProperty";
 
 			public override object GetValue( object obj, BindingFlags invokeAttr, Binder binder, object[] index, CultureInfo culture )
 			{
-				return "DynamicNameValue";
+				return "DynamicPropertyValue";
 			}
 
 			public override void SetValue( object obj, object value, BindingFlags invokeAttr, Binder binder, object[] index, CultureInfo culture )
